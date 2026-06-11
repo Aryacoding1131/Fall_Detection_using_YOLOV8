@@ -1,0 +1,20 @@
+
+from ultralytics import YOLO
+
+# Load a pretrained YOLOv8 nano model
+model = YOLO("yolov8n.pt")# Load the best trained weights
+best_model = YOLO(r"D:\Projects\Fall_detection\fall_dataset\venv\runs\detect\train-2\weights\best.pt") #load the best weights
+
+# Evaluate the model on the validation set
+metrics = best_model.val(
+    data="data.yaml",
+    imgsz=640,
+    split="val"
+)
+
+# Print evaluation metrics
+print("\n===== Model Evaluation Results =====")
+print(f"mAP@0.5       : {metrics.box.map50:.4f}")
+print(f"mAP@0.5:0.95  : {metrics.box.map:.4f}")
+print(f"Precision     : {metrics.box.mp:.4f}")
+print(f"Recall        : {metrics.box.mr:.4f}")
