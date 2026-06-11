@@ -1,0 +1,9 @@
+path: D:/Projects/Fall_detection/fall_dataset
+
+train: images/train
+val: images/val
+
+nc: 1
+
+names:
+  0: fall
