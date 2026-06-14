@@ -62,9 +62,4 @@ ii. validation
 
 <img width="1386" height="947" alt="image" src="https://github.com/user-attachments/assets/0498c9bb-7c34-46f8-8bf0-92cfa178236a" />
 
-#### features needed to be added 
-
-1. acknowledge button in the mail section: It conforms weather the person has read the email or not
-2. if acknowledge button is not clicked by the person then it will alert the neighbouring person
-3. remote monitoring.
 
